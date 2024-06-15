@@ -105,3 +105,44 @@ a {
     color-scheme: dark;
   }
 }
+
+
+// 业务全局css
+
+* {
+  font-family: Open Sans, system-ui;
+}
+
+.site-hover {
+  background: transparent;
+  color: #656f79;
+
+  &:hover {
+    background: #f7f7f7;
+    color: #656f79
+  }
+}
+
+.base-font {
+  overflow: visible;
+  text-transform: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all .1s ease-in;
+  text-decoration: none;
+  white-space: nowrap;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* 重置所有样式 */
+input[type="text"], input[type="password"], input[type="email"], input[type="number"], 
+input[type="search"], input[type="tel"], input[type="url"], input[type="date"], 
+input[type="datetime-local"], input[type="month"], input[type="time"], input[type="week"] {
+  all: unset; /* 取消所有继承的样式 */
+  display: block; /* 将 display 设为 block */
+  box-sizing: border-box; /* 使 padding 和 border 包括在元素的总宽度和高度中 */
+  width: 100%; /* 使宽度占满父元素 */
+}
