@@ -13,13 +13,15 @@
     z-index: 10;
     border-bottom: 1px solid #ebecf0;
     transition: background-color .2s;
-    padding: 0 32px;
+    padding-left: 32px;
+    padding-right: 32px;
     background: #fff;
   }
 
   .context {
     margin-top: 64px;
-    padding: 0 32px;
+    padding-left: 32px;
+    padding-right: 32px;
     max-width: 1830px;
     width: 100%;
   }
