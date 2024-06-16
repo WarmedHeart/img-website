@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import type { NextPage } from "next";
 import Router from "next/router"
 import Image from "next/image";
@@ -5,7 +6,7 @@ import Viewer from "viewerjs";
 import 'viewerjs/dist/viewer.css';
 
 import styles from "@/styles/detail.module.scss";
-import { useEffect, useRef } from "react";
+import LOGO from "@/public/logo.png";
 
 const labelList: string[] = [
   "风景", "宠物", "建筑", "美食", "人物",
@@ -51,7 +52,7 @@ const Detail: NextPage<IDetailProp> = (props) => {
 
   const reviewPhoto = (e: any) => {
     if (!viewer.current) {
-      viewer.current = new Viewer(e.target, {title: false, movable: false});
+      viewer.current = new Viewer(e.target, {title: false, movable: false, navbar: false, button: false});
     }
     viewer.current.show();
   }
@@ -60,7 +61,7 @@ const Detail: NextPage<IDetailProp> = (props) => {
     <div className={styles['detail-container']}>
       <div className={styles['top-banner']}>
         {/* logo */}
-        <Image onClick={() => Router.replace('/')} className={styles['logo']} src="" alt="" />
+        <Image onClick={() => Router.replace('/')} className={styles['logo']} src={LOGO} alt="" />
       </div>
       <div className={styles['context-wrapper']}>
         <div className={styles['context']}>

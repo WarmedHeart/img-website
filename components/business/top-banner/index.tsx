@@ -2,6 +2,8 @@ import classNames from "classnames";
 import { ReactElement, useState } from "react";
 import Image from "next/image";
 
+import LOGO from "@/public/logo.png";
+
 import styles from './styles.module.scss';
 
 interface ITopBanner {
@@ -49,7 +51,7 @@ const TopBanner = (props: ITopBanner): ReactElement => {
     <div className={classNames([wrapperClass])}>
       <div className={classNames([styles['top-banner-wrapper']])}>
         {/* logo */}
-        <Image className={styles['logo']} src="" alt="" />
+        <Image className={styles['logo']} src={LOGO} alt="" />
         {/* search */}
         <div className={styles['search']}>
           <div className={styles['container']}>
