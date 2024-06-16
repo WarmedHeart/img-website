@@ -146,3 +146,10 @@ input[type="datetime-local"], input[type="month"], input[type="time"], input[typ
   box-sizing: border-box; /* 使 padding 和 border 包括在元素的总宽度和高度中 */
   width: 100%; /* 使宽度占满父元素 */
 }
+
+/* 在您的 CSS 文件中添加以下样式 */
+.viewer-open {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
